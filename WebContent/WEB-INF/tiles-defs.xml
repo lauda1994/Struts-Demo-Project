@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+	<definition name="tiles.home" path="/index.jsp">
+		<put name="header" value="WEB-INF/jsp/loginHeader.jsp" type="page" />
+		<put name="body" value="WEB-INF/jsp/NewLog.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+
+	</definition>
+	<definition name="tiles.fieldError" path="/indexErr.jsp">
+		<put name="header" value="WEB-INF/jsp/loginHeader.jsp" type="page" />
+		<put name="body" value="WEB-INF/jsp/NewLog.jsp" type="page" />
+		<put name="script" value="WEB-INF/jsp/fieldError.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+
+
+	</definition>
+	<definition name="tiles.pwError" path="/indexErr.jsp">
+		<put name="header" value="WEB-INF/jsp/loginHeader.jsp" type="page" />
+		<put name="body" value="WEB-INF/jsp/NewLog.jsp" type="page" />
+		<put name="script" value="WEB-INF/jsp/pwError.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+
+
+	</definition>
+	<definition name="tiles.pag2" path="/index.jsp">
+		<put name="body" value="WEB-INF/jsp/landingPage.jsp" type="page" />
+		<put name="header" value="WEB-INF/jsp/navMenu.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+	</definition>
+	<definition name="tiles.inser" path="/inserimentoForm.jsp">
+		<put name="header" value="WEB-INF/jsp/navMenu.jsp" type="page" />
+		<put name="form" value="WEB-INF/jsp/formIns.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+
+	</definition>
+	<definition name="tiles.list" path="/ElencoCc.jsp">
+		<put name="header" value="WEB-INF/jsp/navMenu.jsp" type="page" />
+		<put name="table" value="WEB-INF/jsp/tableCorrentisti.jsp"
+			type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+	</definition>
+
+	<definition name="tiles.mod" path="/modificaCorrentista.jsp">
+		<put name="header" value="WEB-INF/jsp/navMenu.jsp" type="page" />
+		<put name="modify" value="WEB-INF/jsp/findUser.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+	</definition>
+	<definition name="tiles.modEffettuata"
+		path="/EffettuaModifica.jsp">
+		<put name="header" value="WEB-INF/jsp/navMenu.jsp" type="page" />
+		<put name="form" value="WEB-INF/jsp/formMod.jsp" type="page" />
+		<put name="footer" value="WEB-INF/jsp/footer.jsp" type="page" />
+	</definition>
+
+</tiles-definitions>

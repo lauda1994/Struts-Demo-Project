@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+	<global-forwards>
+		<forward name="index" path="/index.do" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<action path="/index" type="action.start">
+			<forward name="success" path="tiles.home" />
+		</action>
+
+		<action path="/login" type="action.Login">
+			<forward name="error" path="tiles.fieldError" />
+			<forward name="error2" path="tiles.pwError" />
+			<forward name="success" path="tiles.pag2" />
+		</action>
+		<action input="tiles.dispPagine" path="/dispModule"
+			type="action.dispModule" parameter="metodo" scope="session">
+			<forward name="inserimento" path="tiles.inser"></forward>
+			<forward name="modifica" path="tiles.mod"></forward>
+			<forward name="tabella" path="tiles.list"></forward>
+		</action>
+		<action path="/insert" type="action.insertDb">
+			<forward name="insert" path="tiles.pag2" />
+		</action>
+		<action path="/EffettuaModifica"
+			type="action.cercaCorrispondenza">
+			<forward name="EffettuaModifica" path="tiles.modEffettuata" />
+		</action>
+		<action path="/modCorrentista" type="action.modifDb">
+			<forward name="modCorrentista" path="tiles.mod" />
+		</action>
+		<action input="tiles.modEffettuata" path="/DispAction"
+			type="action.DispAction" parameter="metodo" scope="session">
+			<forward name="modifica" path="tiles.pag2"></forward>
+			<forward name="elimina" path="tiles.pag2"></forward>
+
+		</action>
+		<action path="/AjaxCognomi" type="action.AjaxCognomi"
+			scope="request" validate="true">
+		</action>
+
+	</action-mappings>
+
+
+
+
+	<controller
+		processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+</struts-config>
+
